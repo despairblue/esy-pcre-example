@@ -1,0 +1,7 @@
+(executables
+  (package scamaybe)
+  (names Server)
+  (flags (-w -40 -w +26 -g))
+  (public_names Server)
+  (libraries lib pcre)
+)

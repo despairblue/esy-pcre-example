@@ -1,0 +1,29 @@
+{
+  "name": "scamaybe",
+  "version": "0.1.0",
+  "description": "Example Reason Esy Project",
+  "license": "UNLICENSED",
+  "esy": {
+    "build": "refmterr dune build",
+    "buildsInSource": "_build",
+    "install": [ "esy-installer #{self.name}.install" ],
+    "NOTE": "Optional release Section. Customizes result of `esy release`",
+    "release": { "bin": [ "Server" ] }
+  },
+  "exportedEnv": {
+    "LD_LIBRARY_PATH": "#{@opam/conf-libpcre.lib}:$LD_LIBRARY_PATH"
+  },
+  "scripts": {},
+  "dependencies": {
+    "@esy-ocaml/reason": "3.5.0",
+    "@opam/dune": "1.9.3",
+    "@opam/pcre": "7.4.1",
+    "@opam/conf-libpcre": "1",
+    "ocaml": "4.6.10",
+    "refmterr": "3.1.10"
+  },
+  "devDependencies": {
+    "@opam/merlin": "3.2.2",
+    "ocaml": "4.6.10"
+  }
+}
